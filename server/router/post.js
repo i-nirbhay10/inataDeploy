@@ -19,7 +19,7 @@ router.get("/getuserprofile", loginauth, async (req, res) => {
       );
     return res.status(200).json({ userposts, userdata });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.json({ massege: "get error in getuserprofile" });
   }
 });
@@ -36,7 +36,7 @@ router.get("/allpost", loginauth, async (req, res) => {
     // console.log(logeduser);
     return res.status(200).json({ userposts, logeduser });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.json({ massege: "get error in create post" });
   }
 });
@@ -46,7 +46,7 @@ router.get("/allpost", loginauth, async (req, res) => {
 router.post("/createpost", loginauth, async (req, res) => {
   try {
     const { photo, caption } = req.body;
-    console.log("hit");
+    // console.log("hit");
     if (!photo) {
       return res.status(422).json({ massege: "plese enter data in all feald" });
     }
@@ -86,7 +86,7 @@ router.put("/userlike", loginauth, async (req, res) => {
       return res.status(200).json({ result, logeduser });
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.json({ massege: "get error in user like" });
   }
 });
@@ -110,7 +110,7 @@ router.put("/userunlike", loginauth, async (req, res) => {
       return res.status(200).json({ result });
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.json({ massege: "get error in getuserprofile" });
   }
 });
@@ -146,7 +146,7 @@ router.put("/comment", loginauth, async (req, res) => {
       .status(200)
       .json({ massege: "comment sucsess full", comment_result });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.json({ massege: "get error in comment" });
   }
 });

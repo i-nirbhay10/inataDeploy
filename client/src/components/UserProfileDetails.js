@@ -1,37 +1,11 @@
 // import { useState } from "react";
-import { FaRegTrashAlt, FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 
 const UserProfileDetails = (props) => {
   const { items, toggel_details } = props;
 
   const defaultuser = "https://cdn-icons-png.flaticon.com/512/149/149071.png";
-  //   const delete_post = async (id) => {
-  //     if (window.confirm("do you realy want to delete it")) {
-  //       try {
-  //         const res = await fetch("http://localhost:5000/deletepost", {
-  //           method: "DELETE",
-  //           headers: {
-  //             "Content-Type": "application/json",
-  //             Authorization: localStorage.getItem("jwt"),
-  //           },
-  //           body: JSON.stringify({
-  //             postId: id,
-  //           }),
-  //         });
-
-  //         const data = await res.json();
-  //         console.log(data);
-
-  //         if (data) {
-  //           postdelete();
-  //           toggel_details();
-  //         }
-  //       } catch (error) {
-  //         console.error("Network error:", error);
-  //       }
-  //     }
-  //   };
 
   return (
     <>
@@ -83,7 +57,7 @@ const UserProfileDetails = (props) => {
                   <div className="p-2 text-xl border-b-2 border-slate-300">
                     All comments
                   </div>
-                  <div className="px-2 max-h-48 max-w-md overflow-auto">
+                  <div className="px-2 max-h-32 max-w-md overflow-auto">
                     <div className="">
                       {items.comments.length ? (
                         <span>
